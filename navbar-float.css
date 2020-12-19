@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background-color: #333;
+    font-family: 'Oswald', sans-serif;
 }
 ul {
     margin: 0;
@@ -8,4 +10,35 @@ ul {
 }
 a {
     text-decoration: none;
+}
+/* Layout */
+.navbar {
+    background-color: #222;
+}
+.fix {
+    clear:both;
+}
+/* .navbar>ul {
+     background-color: green; 
+     border: 2px solid white; 
+} */
+.navbar>ul.branding {
+    margin-right: 100px;
+    margin-left: 50px;
+}
+.navbar>ul.branding,
+.navbar>ul.main {
+    float: left;
+}
+.navbar>ul.client {
+    float: right;
+    margin-right: 50px;
+}
+.navbar>ul>li {
+    /* border: 1px solid orange; */
+    float: left;
+    padding: 20px 10px;
+}
+.navbar>ul>li>a {
+    color: white;
 }
