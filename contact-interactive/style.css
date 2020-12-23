@@ -4,11 +4,44 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
-
 .contacts ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.contacts li {
+    display: table;
+    padding: .24em;
+}
+.contacts li > * {
+    display: table-cell;
+    vertical-align: middle;
+    transition: 1s;
+}
+.contacts li #block-1 a{
+    color: white;
+    text-decoration: none;
+    color: #ddd;
+    letter-spacing: 0.3em;
+    padding: 0.5em;
+}
+.contacts #block-1 > div {
+    width: 0;
+    transition: 1.5s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.contacts #block-1:target > div{
+    width: 100%;
+}
+.contacts li .dots a {
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0.2em;
+}
+.contacts li .dots a:hover{
+    color: #999
 }
 .contacts .avatar img {
     height: 3em;
@@ -22,14 +55,6 @@ body {
     float: right;
     margin-top: -0.6em;
 }
-.status.off {
-    border: 1px solid #777;
-    background-color: #444;
-}
-.status.on {
-    border: 1px solid lightgreen;
-    background-color:green;
-}
 .contacts .info {
     display: table;
     padding: 0.3em;
@@ -37,17 +62,53 @@ body {
 .contacts .info .name {
     display: table-row;
 }
-.contacts .info .message {
-    display: table-row;
+.contacts .action {
+    padding: 0 3em;
 }
-.contacts .table {
-    display: table;
+.contacts .action a.add {
+    text-decoration: none;
+    background-color: #111;
+    color: #ddd;
+    display: block;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 2em;
 }
-.contacts .table-row {
-    display: table-row;
+.contacts .action a.add:hover {
+    background-color: #151515;
+    color:white
 }
-.contacts .table-cell {
-    display: table-cell;
-    vertical-align: middle;
+.contacts .add-details > div {
+    /* display: none; */
+    /* opacity: 0; */
+    /* background-color: #fff; */
+    width: 0;
+    transition: 1.5s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.contacts .add-details > div > a {
+    text-decoration: none;
+    color: #ddd;
+    letter-spacing: 0.3em;
+    padding: 0.5em;
+}
+.contacts li:target .add-details > div{
+    /* display: table-cell; */
+    /* opacity: 1; */
+    width: 100%;
+}
+.contacts li:target > *{
+    transform: translateX(-12em);
+}
+.status.off {
+    border: 1px solid #777;
+    background-color: #444;
+}
+.status.on {
+    border: 1px solid lightgreen;
+    background-color:green;
 }
 

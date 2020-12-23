@@ -8,21 +8,44 @@
 <body>
     <nav class="contacts">
         <h2>My Contacts</h2>
-        <ul class="table">
+        <ul>
             <!-- li-container pentru un singur contact -->
-            <li class="table-row">
-            <figure class="table-cell">
-                <span class="avatar"> 
-                    <img src="images/image-1.png" alt="Bingo Dow">
-                    <figcaption><span class="status on"></span></figcaption>
+            <li id="contact-1">
+                
+                <span id="block-1">
+                    <div>
+                    <a href="#">block</a>
+                    <a href="#">delete</a>
+                    </div>
                 </span>
-            </figure>
-            <section class="table-cell">
+                
+                <span class="dots">
+                    <a href="#block-1">⁞</a>
+                </span>
+
+                <figure>
+                    <span class="avatar"> 
+                        <img src="images/image-1.png" alt="Bingo Dow">
+                        <figcaption><span class="status on"></span></figcaption>
+                    </span>
+                </figure>
+
                 <span class="info">
                     <span class="name">Bingo Dow</span>
                     <span class="message">Hi, how are you?</span>
                 </span>
-            </section>
+
+            <span class="action">
+                <a href="#contact-1" class="add">+</a>
+            </span>
+
+            <span class="add-details">
+                <div>
+                <a href="#">friend</a> 
+                <a href="#">follow</a>
+                </div>
+            </span>
+
             </li>
         </ul>
 
