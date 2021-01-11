@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zer Tree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS EXAMPLE</h1>
+    <h2>with document flow</h2>
+    <h2>with position</h2>
+    <h2>with effects</h2>
+    <h2>with pseudo-states</h2>
+
+    <div class="tree" id="l-1">
+        <div>
+            <div class="lights"></div>
+            <div class="lights"></div>
+
+        </div>
+        <div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+        <div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="lights"></div>
+        </div>
+         <div>  <!--parent4 / relative+flow -->
+            <div class="ball"></div>
+            <div class="ball"></div>
+                <!--child1 / absolute-flow-->
+            <div class="lights"></div>
+        </div>
+        <div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="lights"></div>
+        </div>
+        <a href="#l-1" class="on-switch">ON</a>
+        <a href="#" class="on-switch">OFF</a>
+    </div>
+
+    
+</body>
+</html>

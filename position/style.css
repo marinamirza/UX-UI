@@ -1,0 +1,151 @@
+body {
+    background-color: #223;
+    color: white;
+    font-family: arial;
+}
+h1,h2 {
+    margin: 0;
+    font-weight: 100;
+    text-align: center;
+}
+.tree{
+    width: 400px;
+    height: 700px;
+    /* border: 1px solid white; */
+    margin: 30px auto;
+    /* display:inline block sau table? */
+    text-align: center;
+    
+}
+.tree > div {
+    font-size: 0;
+}
+.tree > :nth-child(5) {
+    /* background: red; */
+    border-bottom: 150px solid green;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent; 
+    position: relative;
+}
+.tree > :nth-child(4) {
+    /* background: red; */
+    margin: 0 50px;
+    border-bottom: 120px solid green;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent; 
+    position: relative;
+}
+.tree > :nth-child(3) {
+    /* background: red; */
+    margin: 0 80px;
+    border-bottom: 90px solid green;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent; 
+    position: relative;
+}
+.tree > :nth-child(2) {
+    /* background: red; */
+    margin: 0 120px;
+    border-bottom: 70px solid green;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent; 
+    position: relative;
+}
+.tree > :nth-child(1) {
+    /* background: red; */
+    margin: 0 150px;
+    border-bottom: 50px solid green;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent; 
+    position: relative;
+}
+.tree .ball {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    border-radius: 100%;
+    background-image: radial-gradient(circle at top left, white, darkgoldenrod);
+    
+}
+.tree > :nth-child(2) > .ball:nth-child(1) {
+    top: 30px;
+    left: -20px;
+}
+.tree > :nth-child(2) > .ball:nth-child(2) {
+    top: 40px;
+    right: -30px;
+}
+.tree > :nth-child(3) > .ball:nth-child(1) {
+    top: 30px;
+    left: -20px;
+}
+.tree > :nth-child(3) > .ball:nth-child(2) {
+    top: 50px;
+    right: -20px;
+}
+.tree > :nth-child(4) > .ball:nth-child(1) {
+    top: 70px;
+    left: -20px;
+}
+.tree > :nth-child(4) > .ball:nth-child(2) {
+    top: 50px;
+    right: -10px;
+}
+.tree > :nth-child(5) > .ball:nth-child(1) {
+    top: 80px;
+    left: -50px;
+}
+.tree > :nth-child(5) > .ball:nth-child(2) {
+    top: 40px;
+    right: -20px;
+}
+.tree > :nth-child(5) > .ball:nth-child(3) {
+    top: 100px;
+    left: 40px;
+}
+.tree .lights {
+    width: 30px;
+    height: 30px;
+    
+    position: absolute;
+    
+    background-color: grey;
+    transform: rotate(45deg);
+}
+.tree .on-switch {
+    background-color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
+.tree:target .lights{
+    background-color: cyan;
+    animation: flashing 1s infinite;
+}
+.tree > :nth-child(1) > .lights:nth-child(2) {
+    transform: rotate(90deg);
+}
+.tree > :nth-child(1) > .lights {
+    position:absolute;
+    top: -20px;
+    left: -15px;
+}
+.tree > :nth-child(4) > .lights {
+    position:absolute;
+    top: 20px;
+}
+.tree > :nth-child(5) > .lights {
+    position:absolute;
+    top: 40px;
+    left: 5px;
+}
+@keyframes flashing {
+    from { 
+        background-color: #888; 
+    }
+    to { 
+        background-color: cyan; 
+    }
+}
+
