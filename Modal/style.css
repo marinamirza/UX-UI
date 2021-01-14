@@ -1,0 +1,91 @@
+body {
+    font-family: Arial;
+    background-color: #223;
+    color: white;
+}
+#content {
+    width: 90%;
+    padding: 5%;
+    margin: 10% auto;
+}
+#content p {
+    text-align: justify;
+}
+#content .ad {
+    font-size: 1.5em;
+    text-align: right;
+    margin: 10% 0;
+}
+#content .ad a {
+    text-decoration: none;
+    background-color: orange;
+    color: #223;
+    
+    padding: 2%;
+    margin-left: 3%;
+}
+#content .ad a:hover {
+    border: 2px dashed white;
+    color: white;
+    
+}
+/* modal here */
+#modal {
+    background-color: #678;
+    padding: 5%;
+
+    display: none;
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+    z-index: 1;
+
+}
+#modal:target {
+    display: block;
+}
+#modal input {
+    padding: 0.8em;
+    width: 20em;
+}
+#modal button {
+    padding: 1em;
+    width: 22em;
+}
+#modal button:hover {
+    background-color: #8881;
+    color: white;
+    cursor: pointer;
+    border: 1px dashed white;
+}
+
+#modal a {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+    position: absolute;
+    right: 3%;
+    top: 2%;
+}
+#modal a:hover {
+    color:#555;
+}
+#modal:target+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000A;
+}
+#modal #prefix {
+    width: 6em;
+    height: 3em;
+    background-color: #678;
+}
+#modal input:nth-child(2) {
+    width: 13em;
+    margin-left: 0.5em;
+}

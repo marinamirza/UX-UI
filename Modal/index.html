@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal Window ~ pseudo-position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="content">
+        <!-- HW1-> Sa folosit <main> pentru ca este continutul esential al lui body.
+        In <main> se desfasoara tema de baza a documentului.-->
+        <!-- HW2-> Regula de aur - in document trebuie sa fie doar un H1.
+        In div-ul ferestrei punem H2 si H3, iar daca dorim sa fie ca dimensiune 
+        mai mare textul - le stilizam un pic. Nu folosim h1 doar pentru design. -->
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur ipsum eum sed est quam fugit voluptatibus animi, similique ea doloremque repellat ab deserunt, impedit perspiciatis dicta esse? Error vitae exercitationem nesciunt optio, fugit sapiente atque sint, reiciendis esse unde ipsum commodi similique vero? Ipsa doloribus inventore magnam. Magnam, consequuntur dignissimos?</p>
+            <p>Accusamus laboriosam tenetur et laudantium libero ad vel quos quis, in minima vitae temporibus cum quaerat facere eum, est odio pariatur aperiam nulla saepe! Maxime ex sed asperiores impedit veritatis. Repudiandae laudantium porro laboriosam unde debitis consectetur accusamus non necessitatibus impedit commodi! Quos architecto cupiditate maiores. Ut atque eius beatae.</p>
+            <p>Quis commodi vitae architecto. Earum eligendi deleniti dolorem, nemo rem unde quos incidunt vitae eveniet dolor? Repellat sed tenetur a minima dolorem porro cupiditate quasi, reprehenderit eius eos laudantium eligendi perferendis impedit natus adipisci illo voluptatum accusantium mollitia! Eum doloremque quos neque alias porro assumenda iure minima at quae voluptates.</p>
+            <p class="ad">
+                To benefit from it HIT<a href="#modal">THIS BUTTON</a>
+            </p>
+    </main>
+
+    <div id="modal">
+        <h2>Apply for this product!</h2>
+        <h3>In order to apply, fill this blank</h3>
+
+        <form action="thankyou.html" target="_blank">
+            <label><input type="text" placeholder="Full Name" required></label>
+
+            <label>
+                <select name="" id="prefix">
+                    <option value="MD">+373</option>
+                    <option value="RO">+40</option>
+                </select>
+                <input type="text" placeholder="Phone:+231 4334443" required>
+            </label>
+
+            <label><input type="text" placeholder="email: example@mail.ex"></label> 
+
+            <button>Apply!!!</button>
+            
+        </form>
+        <a href="#">X</a>
+
+    </div>
+    <div class="overlay"></div>
+    
+</body>
+</html>
