@@ -1,0 +1,120 @@
+body {
+    background-color: #223;
+}
+.abs-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.carousel {
+    background-color: #5554;
+    width: 700px;
+    height: 700px;
+
+    perspective: 800px;
+  
+}
+.carousel .slides {
+    background-color: #7774;
+    width: 600px;
+    height: 600px;
+
+    transform: rotateX(35deg);
+    perspective: 800px;
+    /* animation: rot 10s infinite; NOT GOOD */
+
+}
+.carousel .slides div {
+    background-color: #131;
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+
+    opacity: 0.9;
+    transform-origin: center center -115px ;
+}
+.carousel .slides div:hover {
+    opacity: 1;
+}
+.carousel .slides div:nth-child(1) {
+    transform: rotateX(-42deg) scaleY(1);
+    z-index: 1;
+    animation: rot-1 20s linear infinite;
+}
+.carousel .slides div:nth-child(2) {
+    transform: rotateX(-42deg) rotateY(120deg) scaleY(1);
+    animation: rot-2 20s linear infinite;
+}
+.carousel .slides div:nth-child(3) {
+    transform: rotateX(-42deg) rotateY(240deg) scaleY(1);
+    animation: rot-3 20s linear infinite;
+}
+
+@keyframes rot-1 {
+    0% {
+        transform: rotateX(-42deg) rotateY(0deg) scaleY(1);
+        z-index: 1;
+        filter: brightness(150%);
+    }
+    44% {
+        transform: rotateX(-42deg) rotateY(158.4deg) scaleY(1);
+        z-index: 0;
+        filter: brightness(50%);
+    }
+    100% { transform: rotateX(-42deg) rotateY(360deg) scaleY(1);
+        z-index: 2;
+        filter: brightness(150%);
+
+
+    }
+
+}
+@keyframes rot-2 {
+    0% {
+        transform: rotateX(-42deg) rotateY(120deg) scaleY(1);
+        z-index: 0;
+        filter: brightness(50%);
+    }
+    44% {
+        transform: rotateX(-42deg) rotateY(278deg) scaleY(1);
+        /* z-index: 1; */
+        filter: brightness(100%);
+    }
+
+    88% {
+        transform: rotateX(-42deg) rotateY(436.8deg) scaleY(1);
+        z-index: 1;
+        filter: brightness(150%);
+    }
+    
+    100% {
+        transform: rotateX(-42deg) rotateY(480deg) scaleY(1);
+        z-index: 1;
+        filter: brightness(50%);
+    }
+
+}
+@keyframes rot-3 {
+    0% {
+        transform: rotateX(-42deg) rotateY(240deg) scaleY(1);
+        z-index: 0;
+        filter: brightness(50%);
+    }
+
+    30%  {
+        transform: rotateX(-42deg) rotateY(348deg) scaleY(1);
+        /* z-index: 1; */
+        filter: brightness(150%);
+    }
+
+
+    100% {
+        transform: rotateX(-42deg) rotateY(600deg) scaleY(1);
+        /* z-index: 1; */
+        filter: brightness(50%);
+    }
+
+}
