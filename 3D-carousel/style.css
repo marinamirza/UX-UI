@@ -31,7 +31,7 @@ body {
     /* background-color: #131; */
     width: 400px;
     height: 1200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
     opacity: 0.8;
     transform-origin: center center -115px ;
@@ -68,8 +68,6 @@ body {
     100% { transform: rotateX(-42deg) rotateY(360deg) scaleY(1);
         z-index: 2;
         filter: brightness(150%);
-
-
     }
 
 }
@@ -119,9 +117,31 @@ body {
     }
 
 }
-div .reflection {
-    opacity: 0.4;
+/* div img {
+    margin: 0;
+    padding: 0;
+} */
+div span {
+    display: block;
     transform: rotate(180deg);
-    background-image: linear-gradient(black 40%,transparent 60%);
-    
+    width: 400px;
+    height: 600px;
+    /* margin: 0;
+    padding: 0; */
 }
+.reflection-1 {
+    background-image: linear-gradient(grey,grey,transparent), url(images/image-1.jpg);
+    opacity: 0.8;
+}
+.reflection-2 {
+    background-image: linear-gradient(grey,grey,transparent), url(images/image-2.jpg);
+    opacity: 0.8;
+}
+.reflection-3 {
+    background-image: linear-gradient(grey, grey,transparent), url(images/image-3.jpg);
+    opacity: 0.8;
+}
+
+
+
+
