@@ -2,6 +2,11 @@ body {
     --film-color: #020605b5;
     --main-bg-dark-color: #0D0000;
     --main-bg-light-color: #8C6F5E;
+    --cam-light-gray: #B8B8BF;
+    --cam-mid-gray:  #6c6c73;
+    --cam-dark-gray: #0D0D0D;
+    --cam-glass-blue: #00F6;
+    --cam-glass-magenta: rgba(220, 14, 158, 0.4);
 }
 /* HW1 - move the gradient to 1/3 */
 body {
@@ -17,6 +22,8 @@ body {
         
     margin: 0;
     height: 100vh;
+
+    overflow: hidden;
 }
 ul {
     padding: 0;
@@ -45,7 +52,11 @@ ul {
     /* Using CSS CALC */
     /* width: 4000px; */
     width: calc( 7 * ( 2 * 1vw + 400px ) );
+
+    animation: film-slide 10s linear infinite;
 }
+
+
 .origin .film::before {
     content: "";
     height: 3vh;
@@ -73,10 +84,23 @@ ul {
     border-image-source: url(images/border.png);
   border-image-repeat: repeat;
   border-image-outset: 10px; */
+  filter: grayscale(100%) brightness(50%);
 
 }
+.origin .film li:nth-child(3) img {
+    animation: flash-image 1s;
+    animation-delay: 9s;
+}
+.origin .film li:nth-child(4) img {
+    animation: flash-image 1s;
+    /* animation-fill-mode: forwards; */
+    animation-delay: 5s;
+}
+.origin .film li:nth-child(5) img {
+    animation: flash-image 1s;
+    animation-delay: 1s;
+}
 /* HW2 - add layer + blanding + gradient */
-
 .natural-light {
     width: calc( 7 * ( 2 * 1vw + 400px ) );
     height: 100vh;  
@@ -91,10 +115,112 @@ ul {
     position: absolute;
     top: -50vh;
     left: -33vw;
-    z-index: 2;
+    z-index: 1;
+}
+.origin .camera {
+    width: 640px;
+    height: 420px;
+    /* background-color: #3339; */
+    position: absolute;
+    top: -210px;
+    left: -320px;
+
+    overflow: hidden;
+    border-radius: 10%;
+}
+.origin .camera .case {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(90deg, 
+    var(--cam-dark-gray), var(--cam-mid-gray) 15%, var(--cam-dark-gray) 25%, var(--cam-dark-gray) 75%,  var(--cam-mid-gray) 85%, var(--cam-dark-gray) );
+    border-radius: 10%;
+
+    /* border: 5px solid var(--cam-dark-gray); */
+}
+.origin .camera .objective {
+    background-color: var(--cam-mid-gray);
+    position: absolute;
+    height: 70%;
+    width: calc( 70% * 420 / 640 );
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    border-radius: 100%;
+}
+.origin .camera .grip-right {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-image: radial-gradient(
+        circle,
+        var(--cam-mid-gray),
+        var(--cam-dark-gray)
+    );
+    background-size: 5% 2%;
+    right: -3%;
+    /* z-index: -1; */
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+}
+.origin .camera .objective .casing {
+    height: 95%;
+    width: 95%;
+    position: absolute;
+
+    background: radial-gradient(var(--cam-dark-gray) 60%, var(--cam-mid-gray) 75%);
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
 }
 
-/* .v-guide {
+.origin .camera .objective .glass {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    background-image: radial-gradient(transparent, var(--cam-glass-blue)), 
+    radial-gradient(circle at bottom right, transparent 30%, var(--cam-glass-magenta) 85%, transparent);
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
+}
+
+@keyframes film-slide {
+    from { 
+        left: -90vw;
+    }
+    to{
+        left: -40vw;
+    }
+}
+@keyframes flash-image {
+    from { 
+        filter: grayscale(100%) brightness(50%);
+        
+    }
+    25% {
+        filter: grayscale(100%) brightness(170%);
+    }
+    to{
+        filter: grayscale(0%) brightness(50%);
+    }
+}
+
+
+.v-guide {
     position: absolute;
     height: 100vh;
     width: 1px;
@@ -107,4 +233,4 @@ ul {
     height: 1px;
     left: -33vw;
     background-color: #555;
-} */
+}
