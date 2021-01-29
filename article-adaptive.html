@@ -1,0 +1,92 @@
+<!-- HW1 - Max / min width height cam be use to define div/box size. 
+The max and min width/height properties gives you an extra layer of 
+control in addition to the regular width and height properties
+
+HW2 - To me, the biggest difference between padding and margin is 
+that vertical margins auto-collapse, and padding doesn't.
+Bigger padding deforms my page.-->
+<!-- 
+    320px-------1000px-------1920px 
+    mobile / breakpoint / desktop
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive Content</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ddd;
+        }
+        .content {
+            width: 80%;
+            margin: 1em auto;
+            background-color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        .content article {
+            width: 45%;
+            border: 1px solid #eee;
+            padding: .5em;
+            margin-bottom: .75em;
+
+            display: inline-block;
+            text-align: left;
+        }
+        .content article:nth-child(even) {
+            margin-right: .5em;
+        }
+        .content article:nth-child(odd) {
+            margin-left: .5em;
+        }
+        /* Mobile < 1000px */
+        @media (max-width: 1000px) {
+            .content article {
+                display: block;
+                width: 95%;
+                margin: 0.5em auto!important; 
+            }
+        }
+        @media (max-width: 600px) {
+            .content{
+                width: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <main class="content">
+        <header>
+            <h1>Fresh Articles</h1>
+        </header>
+        <article>
+            <h2>Article Title 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quaerat fuga sint exercitationem dicta praesentium culpa, in dolores cupiditate excepturi nemo, quam incidunt optio pariatur tempore dolorum facere quasi maiores!</p>
+            <p>Consequatur possimus quis et totam aliquam repellat, minus ex velit soluta voluptas voluptates dignissimos omnis, molestiae voluptatem. Perspiciatis repudiandae nesciunt recusandae voluptatem corrupti ad soluta fuga eveniet qui, consequatur magnam?</p>
+        </article>
+        <article>
+            <h2>Article Title 2</h2>
+            <p>Ex velit eos recusandae aut aliquid animi, odit vero quas voluptates labore saepe esse beatae aspernatur culpa, quidem, nostrum quaerat reiciendis. Quisquam dignissimos nulla veritatis quam perspiciatis! Mollitia, nulla doloremque!</p>
+            <p>Aliquid assumenda obcaecati excepturi beatae officiis pariatur, iste qui ipsam repudiandae saepe! Architecto beatae voluptatum expedita eligendi atque magni perferendis quaerat repellat tempora unde rerum tenetur soluta, natus, facilis sapiente.</p>
+        </article>
+        <article>
+            <h2>Article Title 3</h2>
+            <p>Nulla, fugiat delectus. Error dolor totam cumque rem officia, dolores quae qui sunt repellat praesentium nobis culpa natus inventore officiis vel pariatur quam. Nobis perspiciatis officia dolorum aliquam rem eum?</p>
+            <p>Natus enim explicabo corrupti obcaecati ipsum quia debitis reprehenderit, numquam porro neque quasi non at. Praesentium molestiae accusantium, est quae corporis quasi! Atque ad labore a deserunt eum beatae totam.</p>
+        </article>
+        <article>
+            <h2>Article Title 4</h2>
+            <p>Officiis omnis aliquid architecto vel neque, quidem asperiores in soluta mollitia nostrum itaque voluptas hic. In temporibus molestiae neque. Repellat ab eius modi illo voluptatem sint in hic expedita obcaecati!</p>
+            <p>Non laborum aut laboriosam perspiciatis doloribus perferendis quo architecto, saepe officia asperiores harum assumenda tempore voluptatum dignissimos! Ab earum impedit cupiditate aut soluta perspiciatis repudiandae ex fugit hic possimus? Numquam.</p>
+        </article>
+        <footer>
+            <a href="">Read more articles</a>
+        </footer>
+    </main>
+    
+</body>
+</html>
